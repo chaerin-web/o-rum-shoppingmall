@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O'RUM 쇼핑몰 - 취업용 포트폴리오</title>
+    <meta name="description" content="O'RUM의 감각적인 가구를 만나보세요. 상품 정보와 리뷰, 배송·반품·교환 안내를 확인할 수 있습니다.">
+    <meta name="author" content="O'RUM 쇼핑몰">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="O'RUM 쇼핑몰">
+    <meta property="og:title" content="O'RUM 쇼핑몰 | 상품 상세정보">
+    <meta property="og:description" content="O'RUM 가구의 상품 정보와 리뷰를 확인해 보세요.">
+    <meta property="og:image" content="./img/new1.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -19,6 +27,7 @@
 
     <!-- 제품 정보 -->
     <script src="./js/new-product.js" defer></script>
+    <script src="./js/product-detail.js" defer></script>
 </head>
 
 <body>
@@ -949,7 +958,7 @@
                                 <p class="delivery-info">무료(도서산간 제외)/원하는 날짜 지정 가능, O'RUM 단독배송</p>
                             </dd>
                             <dd>
-                                <a href="#" class="btn-link">더보기</a>
+                                <a href="#product-detail-3" class="btn-link">더보기</a>
                             </dd>
                         </dl>
                     </div>
@@ -962,6 +971,7 @@
                         <a href="#" class="btn-buy">구매하기</a>
                     </div>
                 </div>
+            </div>
         </section>
 
         <section class="product-detail-info">
@@ -969,7 +979,7 @@
                 <ul class="sticky-product-menu">
                     <li><a href="#product-detail-1" class="on">상품정보</a></li>
                     <li><a href="#product-detail-2">상품리뷰</a></li>
-                    <li><a href="#product-detail-3">상품Q&A</a></li>
+                    <li><a href="#product-detail-3">배송·반품·교환 안내</a></li>
                 </ul>
                 <div id="product-detail-1">
                     <img src="./img/detail-info.jpg" alt="모어 소프트 소파 3인 상세페이지">
@@ -1013,7 +1023,8 @@
                                         생각하시는 분들께 특히 추천드리고 싶어요. 저처럼 밝고 깔끔하면서도 고급스러운 분위기를 선호하시는 분들께는 정말 잘 맞을 것 같습니다. 단순히
                                         잠만 자는 공간이 아니라 하루의 시작과 끝을 보내는 공간이 더 편안하고 만족스럽게 바뀌었다는 점에서, 이번 선택은 충분히 가치 있었다고 느끼고
                                         있습니다.</p>
-                                    <button class="btn-rvtxt">더보기<img src="./img/review-arrow.svg" alt="더보기 화살표"></button>
+                                    <button class="btn-rvtxt">더보기<img src="./img/review-arrow.svg"
+                                            alt="더보기 화살표"></button>
                                 </div>
                                 <div class="review-img">
                                     <div><img src="./img/review1-1.jpg" alt="모어 소프트 소파 3인 리뷰사진1"></div>
@@ -1234,7 +1245,78 @@
                         </li>
                     </ul>
                 </div>
-                <div id="product-detail-3"></div>
+                <div id="product-detail-3">
+                    <h2>배송·반품·교환 안내</h2>
+                    <table class="product-table">
+                        <tr>
+                            <th>배송 유형</th>
+                            <td>O'RUM 단독배송. 가구 상품은 설치 일정 안내 후 배송됩니다.</td>
+                        </tr>
+                        <tr>
+                            <th>배송비</th>
+                            <td>기본 배송비 무료. 도서산간 지역은 추가 배송비가 발생할 수 있습니다.</td>
+                        </tr>
+                        <tr>
+                            <th>배송 일정</th>
+                            <td>
+                                <ul class="product-del-table-list">
+                                    <li>기본 배송비: 무료</li>
+                                    <li>제주 지역 배송비 안내: 제주도민-무료/ 제주도민이 아닌 고객이 제주도로 배송 요청시: 배송비가 결제 금액에 따라 부과</li>
+                                    <li>상세 배송비는 결제 화면에서 확인하실 수 있습니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>배송기간</th>
+                            <td>설치제품, 가구제품: 배송기간은 주문 후 4~5일 정도 소요 됩니다. 결제 후 SMS, 알림톡 또는 유선을 통해 배송일을 안내 드립니다. 단,주문의
+                                폭주로 인한 택배지연, 수입지연, 천재지변 등의 경우가 발생되었을 때, 배송이 지연될 수 있으며 이러한 경우 사전에 고객께 SMS, 메일, 혹은 유선을
+                                통한 연락으로 배송지연을 안내드리며 상담을 통해 배송일을 재조정 하실 수 있습니다. 가구 외 제품: 주문 후 4~10일 정도 소요 됩니다.</td>
+                        </tr>
+                        <tr>
+                            <th>배송일 및 배송지 변경</th>
+                            <td>배송일 3일 전까지 변경이 가능합니다. (내일배송을 선택하신 경우, 주문 당일 13시까지만 변경 가능)
+                                변경을 원하시는 고객님께서는 리바트몰 고객센터 또는 고객상담실(1577-3332)을 이용해주시기 바랍니다.</td>
+                        </tr>
+                        <tr>
+                        <th>배송 불가 지역</th>
+                        <td>도서산간 지역의 경우 배송이 불가할 수 있습니다. (제주도는 배송 가능하며, 별도 배송비가 부과됩니다.)</td>
+                        </tr>
+                        <tr>
+                            <th>유의사항</th>
+                            <td>
+                                <ul class="product-del-table-list">
+                                    <li>
+                                        현장 상황에 따른 추가 장비 사용 시 고객님 부담 비용이 발생될 수 있습니다. <a href="#">내용 더 보기</a>
+                                        <p class="del-desc">(사다리차 비용, 엘리베이터 사용료, 지게차 사용료 등 / 입구 협소 등의 이유로 발생)<br>
+                                            ※ 총 결제금액 300만 원 이상인 경우, 사다리차 필요시 전액 무상 지원됩니다.</p>
+                                    </li>
+                                    <li>
+                                        엘리베이터나 사다리차 사용이 불가한 현장 상황으로 엔지니어가 직접 제품을 들고 운반할 경우 비용이 추가 부과될 수 있습니다. <a
+                                            href="#">내용 더 보기</a>
+                                    </li>
+                                    <li>
+                                        원활한 설치작업 진행을 위해 설치작업 공간 확보 부탁드립니다.(3m * 3m)
+                                    </li>
+                                    <li>
+                                        설치될 공간에 기존 사용 제품이 위치한 경우 배송 전 미리 정리를 부탁드립니다. 설치 지연 및 추가 비용이 발생될 수 있습니다.
+                                    </li>
+                                    <li>
+                                        기존에 사용하시던 상품에 추가 설치가 필요한 상품을 구매하실 경우, 현장 추가 작업비용이 발생할 수 있습니다. <a href="#">내용
+                                            더
+                                            보기</a>
+                                        <p class="del-desc">자세한 내용은 고객상담실(1577-3332)로 문의 부탁드립니다.</p>
+                                    </li>
+                                    <li>
+                                        배송지가 다른 경우 주문 분리가 불가하오니 주소별 개별 주문해 주시기 바랍니다.
+                                    </li>
+                                    <li>
+                                        보다 신속한 배송 서비스 제공을 위해 일부 지역에서는 요일별 배송제를 시행하고 있습니다. <a href="#">내용 더 보기</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </section>
     </main>
