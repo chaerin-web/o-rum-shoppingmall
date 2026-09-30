@@ -79,6 +79,7 @@ html {
     font-size: var(--fs-pc);
     font-family: 'Pretendard', sans-serif;
     font-weight: var(--fw1);
+    scroll-behavior: smooth;
 }
 
 main{
@@ -96,6 +97,7 @@ main{
 .title-1{
     font-weight: var(--fw2);
 }
+
 .desc-1{
     color: var(--gray-700);
     display: -webkit-box;
