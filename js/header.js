@@ -1,30 +1,33 @@
-const btnMenu = document.querySelector('.btn-menu');
 const smartOverlayMenu = document.querySelector('.smart-overlay-menu');
-const btnMenuClose = document.querySelector('.btn-menu-close');
 
-// 스마트 디바이스 메뉴 열기 닫기 기능
-if(btnMenu){
-    btnMenu.addEventListener('click',()=>{
-        smartOverlayMenu.classList.add('on');
-    });
-}
-
-if(btnMenuClose){
-    btnMenuClose.addEventListener('click',()=>{
-        smartOverlayMenu.classList.remove('on');
-    });
-}
-
-const smartLists = document.querySelectorAll('.gnb-smart>li');
-const gnb2depthSmarts = document.querySelectorAll('.gnb2depth-smart');
-
-smartLists.forEach((li,idx)=>{
-    li.addEventListener('click',(e)=>{
-        if(idx===0){return}
+// 문서에 이벤트 위임
+document.addEventListener('click', (e) => {
+    const openBtn = e.target.closest('.btn-menu');
+    if (openBtn && smartOverlayMenu) {
         e.preventDefault();
-        smartLists.forEach(litag=>litag.classList.remove('on'));
-        li.classList.add('on');
-        gnb2depthSmarts.forEach(div=>div.classList.remove('on'));
-        gnb2depthSmarts[idx-1].classList.add('on');
+        smartOverlayMenu.classList.add('on');
+        return;
+    }
+
+    const closeBtn = e.target.closest('.btn-menu-close');
+    if (closeBtn && smartOverlayMenu) {
+        e.preventDefault();
+        smartOverlayMenu.classList.remove('on');
+        return;
+    }
+
+    const smartLi = e.target.closest('.gnb-smart > li');
+    if (!smartLi) return;
+
+    const smartLists = [...document.querySelectorAll('.gnb-smart > li')];
+    const gnb2depthSmarts = [...document.querySelectorAll('.gnb2depth-smart')];
+    const idx = smartLists.indexOf(smartLi);
+
+    if (idx === 0) return;
+
+    e.preventDefault();
+    smartLists.forEach((li) => li.classList.toggle('on', li === smartLi));
+    gnb2depthSmarts.forEach((div, index) => {
+        div.classList.toggle('on', index === idx - 1);
     });
-})
+});
