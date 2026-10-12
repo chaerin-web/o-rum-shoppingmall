@@ -177,6 +177,25 @@ main>section{
 .like-badge.noab{
     position: initial;
 }
+.favorite-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%) translateY(1rem);
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(25, 25, 25, 0.9);
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    font-size: var(--fs-body2);
+    z-index: 2000;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.favorite-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
 .sale-txt{
     display: flex;
     flex-direction: column;
